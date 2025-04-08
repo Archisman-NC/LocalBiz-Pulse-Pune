@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/LocalBiz-Pulse-Pune/static/css/main.75b63d55.css",
+    "main.js": "/LocalBiz-Pulse-Pune/static/js/main.b1b0108c.js",
+    "static/media/logo.png": "/LocalBiz-Pulse-Pune/static/media/logo.37529577b6c182da9bfc.png",
+    "index.html": "/LocalBiz-Pulse-Pune/index.html",
+    "main.75b63d55.css.map": "/LocalBiz-Pulse-Pune/static/css/main.75b63d55.css.map",
+    "main.b1b0108c.js.map": "/LocalBiz-Pulse-Pune/static/js/main.b1b0108c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75b63d55.css",
+    "static/js/main.b1b0108c.js"
+  ]
+}
