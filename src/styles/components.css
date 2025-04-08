@@ -1,0 +1,110 @@
+/* Header */
+.header {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Card */
+  .card {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 280px;
+    transition: transform 0.2s, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .address {
+    font-size: 0.9rem;
+    color: var(--muted-text-color);
+  }
+  
+  /* Chart placeholder */
+  .chart-placeholder {
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    background-color: var(--chart-bg);
+    border-left: 5px solid var(--accent-color);
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: auto;
+    padding: 1rem;
+    background-color: var(--footer-bg);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Toggle Button */
+  .dark-toggle,
+  .dark-mode-toggle {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dark-toggle:hover,
+  .dark-mode-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+  
+  /* Dark Theme Overrides */
+  [data-theme='dark'] body {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  [data-theme='dark'] .card {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  [data-theme='dark'] .header {
+    background-color: #333;
+    color: white;
+  }
+  
+  [data-theme='dark'] .footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+  }
+  
+  [data-theme='dark'] .chart-placeholder {
+    background-color: #2b2b2b;
+    color: #f1f1f1;
+  }
+  
+
+  

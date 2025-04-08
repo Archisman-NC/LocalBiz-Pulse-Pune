@@ -1,0 +1,81 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .homepage, .aboutpage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    padding: 2rem;
+  }
+  
+  h1, h2, h3 {
+    margin: 0.5rem 0;
+  }
+  
+  /* Sections */
+  .intro-section,
+  .recommendation-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Card Grid */
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Chart Container */
+  .chart-container {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    background-color: var(--chart-bg);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  [data-theme='dark'] body {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  [data-theme='dark'] .card {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  
+  [data-theme='dark'] .header {
+    background-color: #333;
+    color: white;
+  }
+  
+  [data-theme='dark'] .footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+  }
+  
+  .dark-mode-toggle {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
