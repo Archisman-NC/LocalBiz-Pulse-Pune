@@ -2,7 +2,7 @@
   "name": "localbiz-pulse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://archisman-nc.github.io/LocalBiz-Pulse-Pune",
+  "homepage": "https://archisman-nc.github.io",
   "dependencies": {
     "@react-google-maps/api": "^2.20.6",
     "@testing-library/dom": "^10.4.0",
