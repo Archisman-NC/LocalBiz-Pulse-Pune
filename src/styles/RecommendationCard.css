@@ -1,0 +1,49 @@
+.recommendation-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .recommendation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  
+  .business-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .business-rating {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .business-type {
+    font-size: 0.95rem;
+    color: var(--muted-text-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .business-address {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    line-height: 1.4;
+  }
+  

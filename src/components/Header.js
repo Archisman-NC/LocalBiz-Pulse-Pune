@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/components.css';
+import '../styles/Header.css';
 import logo from '../assets/logo.png';
 
 const Header = () => {
@@ -9,21 +9,30 @@ const Header = () => {
 
   useEffect(() => {
     if (darkMode) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      document.body.classList.add('dark-mode');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.setAttribute('data-theme', 'light');
+      document.body.classList.remove('dark-mode');
       localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
 
   return (
     <header className="header">
-      <img src={logo} alt="LocalBiz Pulse" className="logo" />
-      <h1>LocalBiz Pulse – Pune</h1>
-      <button onClick={() => setDarkMode(!darkMode)} className="dark-mode-toggle">
-        {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-      </button>
+      <div className="header-container">
+        <div className="logo-title">
+          <img src={logo} alt="LocalBiz Pulse" className="logo" />
+          <h1>LocalBiz Pulse</h1>
+        </div>
+
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="dark-mode-toggle"
+          aria-label="Toggle dark mode"
+        >
+          {darkMode ? '☀️ Light' : '🌙 Dark'}
+        </button>
+      </div>
     </header>
   );
 };

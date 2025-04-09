@@ -1,5 +1,14 @@
-/* Global Styles */
-body {
+/* === Root Variables (if you're using them elsewhere like in :root or theme context) === */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --card-bg: #f4f4f4;
+    --accent-color: #007bff;
+    --chart-bg: #fdfdfd;
+  }
+  
+  /* === Global Styles === */
+  body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
@@ -7,7 +16,8 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  .homepage, .aboutpage {
+  .homepage,
+  .aboutpage {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -15,40 +25,45 @@ body {
   
   main {
     padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
   
   h1, h2, h3 {
     margin: 0.5rem 0;
   }
   
-  /* Sections */
+  /* === Intro & Recommendation Section === */
   .intro-section,
   .recommendation-section {
-    padding: 2rem;
+    padding: 2rem 1rem;
     text-align: center;
   }
   
-  /* Card Grid */
+  /* === Card Grid === */
   .card-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
-    margin-top: 2rem;
+    padding: 1rem 0;
   }
   
-  /* Chart Container */
+  /* === Chart Container === */
   .chart-container {
     margin: 2rem auto;
-    padding: 1rem;
-    max-width: 800px;
-    background-color: var(--chart-bg);
-    color: var(--text-color);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    max-width: 900px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
+    width: 90%;
   }
-
+  
+  /* === Dark Theme Support === */
   [data-theme='dark'] body {
     background-color: #121212;
     color: #f1f1f1;
@@ -69,6 +84,7 @@ body {
     color: #ccc;
   }
   
+  /* === Dark Mode Toggle === */
   .dark-mode-toggle {
     margin-left: 1rem;
     padding: 0.5rem 1rem;
@@ -77,5 +93,194 @@ body {
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.9rem;
+  }
+  
+  /* === Autocomplete Search === */
+  .autocomplete-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 1.5rem auto;
+  }
+  
+  .autocomplete-wrapper input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: border 0.3s ease;
+  }
+  
+  .autocomplete-wrapper input:focus {
+    border-color: var(--accent-color);
+  }
+  
+  .autocomplete-list {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 0.3rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+  }
+  
+  .autocomplete-list li {
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background 0.2s ease;
+  }
+  
+  .autocomplete-list li:hover {
+    background: var(--accent-color);
+    color: #fff;
+  }
+  
+  /* === Sort Dropdown === */
+  .sort-dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .sort-dropdown label {
+    font-weight: 500;
+  }
+  
+  .sort-dropdown select {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: var(--card-bg);
+    color: var(--text-color);
+    transition: border 0.3s ease;
+  }
+  
+  .sort-dropdown select:focus {
+    border-color: var(--accent-color);
+  }
+  
+  /* === Map Section === */
+  .map-section {
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2rem;
+    background: var(--chart-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    width: 90%;
+  }
+  
+  .map-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .map-section iframe,
+  .map-section canvas,
+  .map-section .leaflet-container {
+    width: 100% !important;
+    height: 450px !important;
+    border-radius: 12px;
+    margin: auto;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* === Filters === */
+  .filters-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-color);
+    min-width: 160px;
+  }
+  
+  .filter-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .filter-group select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+  }
+  
+  /* === Footer === */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    color: #777;
+    margin-top: auto;
+  }
+  
+  /* === Media Queries for Responsiveness === */
+  @media (max-width: 768px) {
+    main {
+      padding: 1.5rem;
+    }
+  
+    .sort-dropdown {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .map-section h2 {
+      font-size: 1.3rem;
+    }
+  
+    .filter-group {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .map-section .leaflet-container {
+      height: 300px !important;
+    }
+  
+    h1 {
+      font-size: 1.6rem;
+    }
+  
+    h2 {
+      font-size: 1.4rem;
+    }
+  
+    .autocomplete-wrapper {
+      max-width: 90%;
+    }
+  
+    .chart-container {
+      padding: 1rem;
+    }
   }
   

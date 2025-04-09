@@ -1,31 +1,42 @@
 import React from "react";
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  CartesianGrid,
+  Legend,
 } from "recharts";
 
-const data = [
-  { area: "Koregaon", restaurants: 12, salons: 8 },
-  { area: "Baner", restaurants: 18, salons: 10 },
-  { area: "Hadapsar", restaurants: 10, salons: 6 },
-  { area: "Viman Nagar", restaurants: 14, salons: 9 },
-];
+const BusinessChart = ({ data }) => {
+  // Count businesses by type
+  const typeCount = {};
+  data.forEach((item) => {
+    typeCount[item.type] = (typeCount[item.type] || 0) + 1;
+  });
 
-const BusinessChart = () => {
+  // Convert to array and sort by count (descending), then take top 8
+  const chartData = Object.entries(typeCount)
+    .map(([type, count]) => ({ type, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 8);
+
   return (
-    <div className="chart-container">
-      <h2>Business Distribution by Area</h2>
-      <ResponsiveContainer width="100%" height={300}>
+    <div className="chart-container" style={{ padding: '1rem' }}>
+      <h2 style={{ textAlign: 'center' }}>Top 8 Business Types in Pune</h2>
+      <ResponsiveContainer width="100%" height={350}>
         <BarChart
-          data={data}
-          margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+          data={chartData}
+          margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="area" />
+          <XAxis dataKey="type" angle={-30} textAnchor="end" interval={0} />
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="restaurants" fill="#8884d8" />
-          <Bar dataKey="salons" fill="#82ca9d" />
+          <Bar dataKey="count" fill="#8884d8" barSize={40} radius={[10, 10, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>
@@ -33,4 +44,3 @@ const BusinessChart = () => {
 };
 
 export default BusinessChart;
-

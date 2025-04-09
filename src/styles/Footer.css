@@ -1,0 +1,16 @@
+.footer {
+    background-color: var(--footer-bg);
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted-text-color);
+    border-top: 1px solid #ddd;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.03);
+  }
+  
+  .footer p {
+    margin: 0;
+    font-weight: 500;
+  }
+  

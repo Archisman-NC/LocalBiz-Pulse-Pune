@@ -1,26 +1,41 @@
-/* Light Theme (Default) */
+/* Light Mode (default) */
 :root {
   --bg-color: #ffffff;
-  --text-color: #111111;
-  --card-bg: #f9f9f9;
-  --header-bg: #ffffff;
+  --text-color: #000000;
+  --header-bg: #4c6ef5;
+  --card-bg: #ffffff;
+  --muted-text-color: #666666;
+  --chart-bg: #fff6e5;
+  --accent-color: #f59f00;
+  --footer-bg: #f1f1f1;
+  --transition-speed: 0.3s;
 }
 
-/* Dark Theme */
+/* Dark Mode */
 body.dark-mode {
   --bg-color: #121212;
-  --text-color: #ffffff;
-  --card-bg: #1e1e1e;
-  --header-bg: #1a1a1a;
+  --text-color: #f1f1f1;
+  --header-bg: #1f1f2e;
+  --card-bg: #1e1e2f;
+  --muted-text-color: #bbbbbb;
+  --chart-bg: #2b2b3c;
+  --accent-color: #ffd43b;
+  --footer-bg: #1f1f2e;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
-/* Apply to whole page */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global styles */
 body {
+  font-family: 'Inter', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
-  font-family: sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 * {
@@ -41,4 +56,11 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
 }
