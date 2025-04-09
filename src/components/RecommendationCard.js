@@ -1,15 +1,18 @@
 import React from 'react';
-import '../styles/components.css';
+import '../styles/RecommendationCard.css';
 
 const RecommendationCard = ({ name, type, rating, address }) => {
   return (
-    <div className="card">
-      <h3>{name}</h3>
-      <p><strong>Type:</strong> {type}</p>
-      <p><strong>Rating:</strong> {rating} ★</p>
-      <p className="address">{address}</p>
+    <div className="recommendation-card">
+      <div className="card-header">
+        <h3 className="business-name">{name}</h3>
+        <span className="business-rating">⭐ {rating}</span>
+      </div>
+      <p className="business-type">{type}</p>
+      <p className="business-address">{address}</p>
     </div>
   );
 };
 
 export default RecommendationCard;
+
