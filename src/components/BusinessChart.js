@@ -1,14 +1,24 @@
 import React from "react";
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
   Tooltip,
-  ResponsiveContainer,
-  CartesianGrid,
   Legend,
-} from "recharts";
+} from "chart.js";
+import { Bar } from "react-chartjs-2";
+
+// Register necessary Chart.js components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const BusinessChart = ({ data }) => {
   // Count businesses by type
@@ -23,22 +33,40 @@ const BusinessChart = ({ data }) => {
     .sort((a, b) => b.count - a.count)
     .slice(0, 8);
 
+  // Prepare Chart.js data and options
+  const chartJsData = {
+    labels: chartData.map((d) => d.type),
+    datasets: [
+      {
+        label: "Number of Businesses",
+        data: chartData.map((d) => d.count),
+        backgroundColor: "#8884d8",
+        borderRadius: 10,
+        barThickness: 40,
+      },
+    ],
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { position: "top" },
+      title: { display: true, text: "Top 8 Business Types in Pune" },
+    },
+    scales: {
+      x: {
+        ticks: {
+          maxRotation: 60,
+          minRotation: 60,
+        },
+      },
+    },
+  };
+
   return (
-    <div className="chart-container" style={{ padding: '1rem' }}>
-      <h2 style={{ textAlign: 'center' }}>Top 8 Business Types in Pune</h2>
-      {/* <ResponsiveContainer width="100%" height={350}>
-        <BarChart
-          data={chartData}
-          margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="type" angle={-30} textAnchor="end" interval={0} />
-          <YAxis />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="count" fill="#8884d8" barSize={40} radius={[10, 10, 0, 0]} />
-        </BarChart>
-      </ResponsiveContainer> */}
+    <div className="chart-container" style={{ height: "350px", padding: "1rem" }}>
+      <Bar data={chartJsData} options={chartOptions} />
     </div>
   );
 };
