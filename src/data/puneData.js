@@ -1,4 +1,5 @@
 const puneData = [
+  // Original 30 entries (unchanged)
   {
     id: 1,
     name: "Chitale Bandhu Mithaiwale",
@@ -268,9 +269,282 @@ const puneData = [
     address: "KP Annexe, Pune",
     latitude: 18.5365,
     longitude: 73.9015
+  },
+
+  // New 30 entries below
+  {
+    id: 31,
+    name: "Chai Pe Charcha",
+    type: "Tea Cafe",
+    rating: 4.2,
+    address: "Viman Nagar, Pune",
+    latitude: 18.5654,
+    longitude: 73.9156
+  },
+  {
+    id: 32,
+    name: "Pune Central Mall",
+    type: "Shopping Mall",
+    rating: 4.3,
+    address: "Shivajinagar, Pune",
+    latitude: 18.5311,
+    longitude: 73.8442
+  },
+  {
+    id: 33,
+    name: "Rolls Mania",
+    type: "Fast Food",
+    rating: 4.0,
+    address: "Hinjewadi, Pune",
+    latitude: 18.5979,
+    longitude: 73.7083
+  },
+  {
+    id: 34,
+    name: "Beardo Lounge",
+    type: "Men's Salon",
+    rating: 4.5,
+    address: "JM Road, Pune",
+    latitude: 18.5298,
+    longitude: 73.8461
+  },
+  {
+    id: 35,
+    name: "Chopsticks Express",
+    type: "Chinese Restaurant",
+    rating: 4.3,
+    address: "Hadapsar, Pune",
+    latitude: 18.4989,
+    longitude: 73.9264
+  },
+  {
+    id: 36,
+    name: "The Book Lounge",
+    type: "Bookstore & Cafe",
+    rating: 4.6,
+    address: "Aundh, Pune",
+    latitude: 18.5645,
+    longitude: 73.8061
+  },
+  {
+    id: 37,
+    name: "Keventers",
+    type: "Milkshake Bar",
+    rating: 4.2,
+    address: "MG Road, Pune",
+    latitude: 18.5170,
+    longitude: 73.8801
+  },
+  {
+    id: 38,
+    name: "Trufitt & Hill",
+    type: "Luxury Salon",
+    rating: 4.7,
+    address: "Kalyani Nagar, Pune",
+    latitude: 18.5481,
+    longitude: 73.9019
+  },
+  {
+    id: 39,
+    name: "Petzo World",
+    type: "Pet Store",
+    rating: 4.5,
+    address: "Baner, Pune",
+    latitude: 18.5564,
+    longitude: 73.7921
+  },
+  {
+    id: 40,
+    name: "House of Mandarin",
+    type: "Fine Dining",
+    rating: 4.6,
+    address: "Koregaon Park, Pune",
+    latitude: 18.5376,
+    longitude: 73.8940
+  },
+  {
+    id: 41,
+    name: "Hop In Bar",
+    type: "Pub",
+    rating: 4.2,
+    address: "Viman Nagar, Pune",
+    latitude: 18.5661,
+    longitude: 73.9170
+  },
+  {
+    id: 42,
+    name: "Dough & Cream",
+    type: "Bakery",
+    rating: 4.4,
+    address: "Camp, Pune",
+    latitude: 18.5143,
+    longitude: 73.8782
+  },
+  {
+    id: 43,
+    name: "Happy Feet",
+    type: "Shoe Store",
+    rating: 4.3,
+    address: "Tilak Road, Pune",
+    latitude: 18.5091,
+    longitude: 73.8542
+  },
+  {
+    id: 44,
+    name: "CraftsVilla",
+    type: "Handmade Boutique",
+    rating: 4.6,
+    address: "Pashan, Pune",
+    latitude: 18.5472,
+    longitude: 73.7929
+  },
+  {
+    id: 45,
+    name: "Frozen Bottle",
+    type: "Dessert Shop",
+    rating: 4.3,
+    address: "Deccan, Pune",
+    latitude: 18.5191,
+    longitude: 73.8427
+  },
+  {
+    id: 46,
+    name: "Click Point",
+    type: "Photo Studio",
+    rating: 4.2,
+    address: "Swargate, Pune",
+    latitude: 18.5011,
+    longitude: 73.8632
+  },
+  {
+    id: 47,
+    name: "Green Soul Organics",
+    type: "Organic Store",
+    rating: 4.5,
+    address: "Karve Nagar, Pune",
+    latitude: 18.4888,
+    longitude: 73.8156
+  },
+  {
+    id: 48,
+    name: "Qilaa",
+    type: "Luxury Dining",
+    rating: 4.7,
+    address: "Koregaon Park, Pune",
+    latitude: 18.5379,
+    longitude: 73.8941
+  },
+  {
+    id: 49,
+    name: "The French Window",
+    type: "Cafe",
+    rating: 4.6,
+    address: "Koregaon Park, Pune",
+    latitude: 18.5370,
+    longitude: 73.8938
+  },
+  {
+    id: 50,
+    name: "Style Hub",
+    type: "Unisex Salon",
+    rating: 4.3,
+    address: "Erandwane, Pune",
+    latitude: 18.5075,
+    longitude: 73.8296
+  },
+  {
+    id: 51,
+    name: "Kalyani Sports",
+    type: "Sports Store",
+    rating: 4.4,
+    address: "Kalyani Nagar, Pune",
+    latitude: 18.5492,
+    longitude: 73.9005
+  },
+  {
+    id: 52,
+    name: "PlayZone",
+    type: "Gaming Arcade",
+    rating: 4.5,
+    address: "Seasons Mall, Pune",
+    latitude: 18.5197,
+    longitude: 73.9313
+  },
+  {
+    id: 53,
+    name: "GreenLeaf Cafe",
+    type: "Healthy Food",
+    rating: 4.2,
+    address: "Aundh, Pune",
+    latitude: 18.5611,
+    longitude: 73.8092
+  },
+  {
+    id: 54,
+    name: "Star Bazaar",
+    type: "Supermarket",
+    rating: 4.1,
+    address: "Hadapsar, Pune",
+    latitude: 18.5098,
+    longitude: 73.9242
+  },
+  {
+    id: 55,
+    name: "Snap Salon",
+    type: "Hair & Beauty",
+    rating: 4.3,
+    address: "Wakad, Pune",
+    latitude: 18.5991,
+    longitude: 73.7612
+  },
+  {
+    id: 56,
+    name: "The Cookie Jar",
+    type: "Bakery",
+    rating: 4.5,
+    address: "Model Colony, Pune",
+    latitude: 18.5322,
+    longitude: 73.8450
+  },
+  {
+    id: 57,
+    name: "Print Palace",
+    type: "Stationery & Printing",
+    rating: 4.0,
+    address: "Shivajinagar, Pune",
+    latitude: 18.5302,
+    longitude: 73.8431
+  },
+  {
+    id: 58,
+    name: "Sapphire Spa",
+    type: "Spa & Wellness",
+    rating: 4.6,
+    address: "Viman Nagar, Pune",
+    latitude: 18.5649,
+    longitude: 73.9177
+  },
+  {
+    id: 59,
+    name: "The Beer Cafe",
+    type: "Bar",
+    rating: 4.3,
+    address: "Phoenix Marketcity, Pune",
+    latitude: 18.5610,
+    longitude: 73.9175
+  },
+  {
+    id: 60,
+    name: "Trendy Threads",
+    type: "Clothing Store",
+    rating: 4.2,
+    address: "Kothrud, Pune",
+    latitude: 18.5071,
+    longitude: 73.8080
   }
 ];
 
 export default puneData;
+
 
  
