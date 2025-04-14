@@ -1,5 +1,4 @@
 const puneData = [
-  // Original 30 entries (unchanged)
   {
     id: 1,
     name: "Chitale Bandhu Mithaiwale",
